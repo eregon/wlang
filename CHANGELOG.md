@@ -1,3 +1,9 @@
+# Version 0.10.3 / FIX ME
+
+* On the devel side
+
+  * Bumped rake dependency to 0.9.2
+
 # Version 0.10.2 / 2011-02-25
 
 * Bug fixes
