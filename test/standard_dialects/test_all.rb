@@ -10,15 +10,26 @@ module WLang
       basename = File.basename(template_file, ".tpl")
 
       define_method("test_#{dialect_name}_#{basename}") do 
-        expected = File.read(File.join(folder, "#{basename}.exp"))
+        exp_file = File.join(File.dirname(template_file), "#{basename}.exp")
+        expected = File.read(exp_file)
         template = WLang::file_template(template_file, "wlang/#{dialect_name}")
         assert_equal(expected, template.instantiate)
       end
+
     end
     
     Dir["#{File.dirname(__FILE__)}/*"].each do |folder|
       Dir["#{folder}/*.tpl"].each do |template_file|
         define_method_for(folder, template_file)
+      end
+      if RUBY_VERSION < "1.9"
+        Dir["#{folder}/1.8/*.tpl"].each do |template_file|
+          define_method_for(folder, template_file)
+        end
+      else
+        Dir["#{folder}/1.9/*.tpl"].each do |template_file|
+          define_method_for(folder, template_file)
+        end
       end
     end
     
