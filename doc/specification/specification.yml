@@ -170,9 +170,9 @@ rulesets:
       - ["wlang/xhtml", "Hello &{<script>}",                   "Hello &lt;script&gt;"]
       - ["wlang/xhtml", "Hello &;{<script>}",                  "Hello &lt;script&gt;"]
       - ["wlang/ruby",  "puts 'Hello &'{name}'",               "puts 'Hello name'"]
-      - ["wlang/ruby",  "puts 'Hello &'{!{name}}'",            "puts 'Hello O\'Neil'"]
-      - ["wlang/ruby",  "puts 'Hello ' << '{name}'",           "puts 'Hello ' << 'O\'Neil'"]
-      - ["wlang/sql",   "... WHERE name='{name}'",             "... WHERE name='O\'Neil'"]
+      - ["wlang/ruby",  "puts 'Hello &'{!{name}}'",            "puts 'Hello O\\'Neil'"]
+      - ["wlang/ruby",  "puts 'Hello ' << '{name}'",           "puts 'Hello ' << 'O\\'Neil'"]
+      - ["wlang/sql",   "... WHERE name='{name}'",             "... WHERE name='O\\'Neil'"]
       - ["wlang/sql/sybase",  "... WHERE name='{name}'",       "... WHERE name='O''Neil'"]
     rules:
       # &{...}
