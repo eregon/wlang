@@ -1,11 +1,6 @@
-# Noe template for ruby gem libraries (https://github.com/blambeau/noe) - short version
-# Run 'noe show-spec' and 'noe help show-spec' for additional details.
-
-# Don't remove this entry!
 template-info:
   name: "ruby"
   version: 1.1.0
-
 # Update to match your own configuration.
 variables:
   lower: 
