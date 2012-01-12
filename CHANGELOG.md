@@ -2,7 +2,11 @@
 
 * On the devel side
 
-  * Bumped rake dependency to 0.9.2
+  * Bumped rake  to 0.9.2
+  * Bumped noe   to 1.7.0 as well as the ruby.noe template
+  * Bumped rspec to 2.8.0 
+  * Bumped bluecloth to 2.2.0
+  * Fix the YAML test failures due to Psych vs. Syck differences
 
 # Version 0.10.2 / 2011-02-25
 

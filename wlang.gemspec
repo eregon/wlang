@@ -125,9 +125,9 @@ Gem::Specification.new do |s|
   #
   s.add_development_dependency("rake", "~> 0.9.2")
   s.add_development_dependency("bundler", "~> 1.0")
-  s.add_development_dependency("rspec", "~> 2.4.0")
+  s.add_development_dependency("rspec", "~> 2.8.0")
   s.add_development_dependency("yard", "~> 0.6.4")
-  s.add_development_dependency("bluecloth", "~> 2.0.9")
+  s.add_development_dependency("bluecloth", "~> 2.2.0")
   s.add_development_dependency("rdoc", ">= 0")
   s.add_development_dependency("coderay", ">= 0")
   s.add_development_dependency("RedCloth", ">= 0")
