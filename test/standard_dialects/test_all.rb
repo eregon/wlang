@@ -13,7 +13,13 @@ module WLang
         exp_file = File.join(File.dirname(template_file), "#{basename}.exp")
         expected = File.read(exp_file)
         template = WLang::file_template(template_file, "wlang/#{dialect_name}")
-        assert_equal(expected, template.instantiate)
+        obtained = template.instantiate
+        ass_file = File.join(File.dirname(template_file), "#{basename}.ass")
+        if File.exists?(ass_file)
+          Kernel.eval(File.read(ass_file), binding, ass_file)
+        else
+          assert_equal(expected, obtained)
+        end
       end
 
     end

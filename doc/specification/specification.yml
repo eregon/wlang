@@ -426,7 +426,4 @@ symbols:
     remark: cannot be used as tag symbol; reserved for block delimiter 
   - name: right brace
     symbol: '}'
-    remark: cannot be used as tag symbol; reserved for block delimiter 
-          
-    
-    
+    remark: cannot be used as tag symbol; reserved for block delimiter
